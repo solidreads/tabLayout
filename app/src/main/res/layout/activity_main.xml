@@ -4,7 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.mrk2.tablayout.MainActivity">
+
+<android.support.design.widget.TabLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    app:tabIndicatorHeight="0dp"
+    android:id="@+id/tabs"
+    app:tabMode="fixed"
+    app:tabGravity="fill"
+    />
+    <!--- app:tabIndicatorHeight="0dp"  es el indicador de que estamos en una pestaña
+     app:tabGravity="fill"  acomodara cuando se gire la pantalla
+    -->
+    <!--  colocamos un separador con un view-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#E0E0E0"
+        />
+
+    <!--   añadimos un view pager para que nos deslizemos en las vistas de izquierda a derecha
+     sin necesidad de que nosotros demos click sobre los tabs
+     -->
+    
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager"></android.support.v4.view.ViewPager>
 
     <TextView
         android:layout_width="wrap_content"
